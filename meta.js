@@ -4,6 +4,7 @@ module.exports = {
       return options.fn(this)
     }
   },
+  skipInterpolation: "**/*.vue",
   prompts: {
     name: {
       'type': 'string',
