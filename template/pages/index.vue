@@ -36,12 +36,17 @@
         return
       }
       this.online = Boolean(window.navigator.onLine)
-      this._offline_listener = window.addEventListener('offline', () => this.online = false)
-      this._online_listener = window.addEventListener('online', () => this.online = true)
+      window.addEventListener('offline', this._toggleNetworkStatus)
+      window.addEventListener('online', this._toggleNetworkStatus)
+    },
+    methods: {
+      _toggleNetworkStatus ({ type }) {
+        this.online = type === 'online'
+      }
     },
     destroyed () {
-      window.removeEventListener('offline', this._offline_listener)
-      window.removeEventListener('online', this._online_listener)
+      window.removeEventListener('offline', this._toggleNetworkStatus)
+      window.removeEventListener('online', this._toggleNetworkStatus)
     }
   }
 </script>
