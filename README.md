@@ -11,7 +11,7 @@ Live demo: [coming soon]
 This is a project template for [vue-cli](https://github.com/vuejs/vue-cli).
 
 ``` bash
-$ vue init nuxt/pwa my-project  
+$ vue init nuxt-community/pwa-template my-project  
 $ cd my-project                     
 # install dependencies
 $ npm install # Or yarn install
