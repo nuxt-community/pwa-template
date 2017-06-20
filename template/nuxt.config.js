@@ -22,11 +22,6 @@ module.exports = {
   ** Modules
   */
   modules: [
-    {
-      src: '@nuxtjs/pwa',
-      options: {
-        // you can provide preset customizations here
-      }
-    }
+    '@nuxtjs/pwa'
   ]
 }
