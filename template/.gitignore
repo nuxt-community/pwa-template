@@ -15,7 +15,11 @@ dist
 *iml
 
 # VSCode
-.vscode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
 
 # Generated files
 static/manifest*.json
